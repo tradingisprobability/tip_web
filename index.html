@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading is Probability | Live Forex Webinar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+      <h1>Trading is Probability</h1>
+
+      <div class="menu-toggle" id="menuToggle">☰</div>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#webinar">Webinar</a>
+        <a href="https://www.instagram.com/trading_is_probability/" target="_blank">Instagram</a>
+      </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>How to Earn from Forex Trading</h2>
+    <p>Beginner‑Friendly Live Webinar • Learn Trading from Scratch</p>
+
+    <div class="timer">
+      <p>Webinar Starts In</p>
+      <div id="countdown"></div>
+    </div>
+
+    <a class="cta-button" href="https://wa.me/91XXXXXXXXXX?text=Hi,+I+want+to+join+the+Forex+Trading+Webinar">Register Now</a>
+  </section>
+
+  <!-- About -->
+  <section class="about fade-in" id="about">
+    <h2>About This Webinar</h2>
+    <p>This live session is designed for Indian beginners who want to understand Forex trading in a structured, rule‑based way. No hype. No shortcuts. Only probabilities, risk management, and discipline.</p>
+  </section>
+
+  <!-- What You Will Learn -->
+  <section class="services fade-in">
+    <h2>What You Will Learn</h2>
+    <div class="card-grid">
+      <div class="card blue">
+        <h3>📊 Forex Basics</h3>
+        <p>Understand how the Forex market works from zero.</p>
+      </div>
+      <div class="card red">
+        <h3>📈 Trading Framework</h3>
+        <p>Step‑by‑step approach to analyze and plan trades.</p>
+      </div>
+      <div class="card yellow">
+        <h3>🧠 Psychology & Risk</h3>
+        <p>Learn risk management and trader mindset.</p>
+      </div>
+      <div class="card green">
+        <h3>⏱️ Session Timing</h3>
+        <p>When to trade and when not to trade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonus Section -->
+  <section class="about fade-in">
+    <h2>🎁 Webinar Bonuses</h2>
+    <p>✔ Last 1‑Year XAUUSD Chart PDF (Real Market Examples)</p>
+    <p>✔ Access to Private Guidance Group</p>
+    <p>✔ Post‑Webinar Support & Q&A</p>
+  </section>
+
+  <!-- Webinar Details -->
+  <section class="webinar fade-in" id="webinar">
+    <h2>Live Webinar Details</h2>
+    <p><strong>Date:</strong> 27 December 2025</p>
+    <p><strong>Time:</strong> 11:00 AM IST</p>
+    <p><strong>Fee:</strong> ₹999</p>
+    <p><strong>Speaker:</strong> Naveen Kumar – Forex & XAUUSD Trader</p>
+
+    <a class="cta-button whatsapp" href="https://forms.gle/XXXXXXXX">Register Now</a>
+
+    <p class="disclaimer">This webinar is for educational purposes only. Trading involves risk. No guaranteed profits.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Trading is Probability | Learn Trading the Right Way</p>
+  </footer>
+
+  <script>
+    // Countdown Timer to 27 Dec 2025, 11:00 AM IST
+    const countdown = document.getElementById('countdown');
+
+    const webinarDate = new Date('December 27, 2025 11:00:00 GMT+0530').getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = webinarDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = 'Webinar Started';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  background: #f9f9f9; color: #333;
+}
+
+h1, h2, h3 { margin: 0 0 10px; }
+p { margin: 0 0 15px; line-height: 1.6; }
+
+/* Navbar */
+.navbar {
+  background: #0077cc; color: white;
+  padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+}
+.navbar a {
+  color: white; margin: 0 10px; text-decoration: none; font-weight: 600;
+}
+.navbar a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  text-align: center; padding: 80px 20px;
+  background: linear-gradient(135deg, #0077cc, #33ccff);
+  color: white;
+}
+.hero.small { padding: 50px 20px; }
+
+/* Sections */
+section { padding: 40px 20px; text-align: center; }
+.about, .services, .webinar { max-width: 1000px; margin: auto; }
+
+/* Cards */
+.card-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-top: 20px;
+}
+.card {
+  padding: 20px; border-radius: 12px; color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
+
+.blue { background: #2196F3; }
+.red { background: #E53935; }
+.yellow { background: #FFC107; color: #333; }
+.green { background: #43A047; }
+
+/* CTA Buttons */
+.cta-button {
+  background: #25D366; color: white;
+  padding: 12px 25px; border-radius: 8px;
+  text-decoration: none; font-weight: bold; transition: 0.3s;
+  display: inline-block;
+}
+.cta-button:hover { background: #128C7E; }
+
+/* Footer */
+footer {
+  background: #333; color: white;
+  text-align: center; padding: 20px;
+}
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease-in-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+ .navbar {
+  background: #0077cc;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;   /* ✅ IMPORTANT */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #0077cc;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;  /* ✅ IMPORTANT */
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+}
+// Mobile menu toggle
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
